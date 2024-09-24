@@ -1,0 +1,15 @@
+.btn-sm{
+  @apply bg-transparent text-sm shadow hover:bg-black ml-2 hover:text-white text-black border font-normal py-0.5 px-2 rounded;
+
+}
+
+.btn-md{
+  @apply bg-transparent text-sm shadow hover:bg-black ml-2 hover:text-white text-black border font-normal py-0.5 px-5 rounded ;
+}
+
+.btn-lg{
+  @apply bg-transparent text-sm shadow hover:bg-black ml-2 hover:text-white text-black border font-normal py-0.5  lg:px-8 rounded  sm:px-2 md:px-4 ring-1 ring-gray-100 ring-offset-2;
+}
+.btn-outline-on-hover{
+@apply bg-transparent text-sm shadow hover:bg-black ml-2 hover:text-white text-black border font-normal py-0.5  lg:px-8 rounded  sm:px-2 md:px-4 focus:ring-1 focus:ring-gray-100 focus:ring-offset-2 hover:ring-1 hover:ring-black
+}
