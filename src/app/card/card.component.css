@@ -1,0 +1,13 @@
+.card-no-border{
+
+  @apply w-64 rounded overflow-hidden shadow-lg ml-6 mt-6 p-3;
+}
+.card-border{
+  @apply w-64 rounded border overflow-hidden shadow-md ml-6 mt-6 p-3;
+}
+.card-border-sm-shadow{
+ @apply w-64 rounded border overflow-hidden shadow-sm ml-6 mt-6 p-3;
+}
+.card-border-sm-shadow-more-rounded{
+ @apply w-64 rounded-lg border overflow-hidden shadow-md ml-6 mt-6 p-3;
+}
