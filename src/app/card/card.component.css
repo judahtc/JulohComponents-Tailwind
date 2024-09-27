@@ -7,8 +7,19 @@
   @apply w-11/12 rounded border overflow-hidden shadow-md ml-6 mt-6 p-3 md:bg-blue-100 lg:bg-red-300;
 }
 .card-border-sm-shadow{
- @apply w-11/12 rounded border overflow-hidden shadow-sm ml-6 mt-6 p-3;
+ @apply w-11/12 border-2 overflow-hidden shadow-sm ml-6 mt-6 p-3;
 }
 .card-border-sm-shadow-more-rounded{
  @apply w-11/12 rounded-lg border overflow-hidden shadow-md ml-6 mt-6 p-3;
+}
+
+.glassy {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.grad {
+  background-image: linear-gradient(to right, #ffffff, #595959);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
