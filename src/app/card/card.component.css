@@ -1,10 +1,10 @@
 
 .card-no-border{
 
-  @apply w-11/12 rounded overflow-hidden shadow-lg ml-6 mt-6 p-3 md:bg-blue-100 lg:bg-red-300;
+  @apply w-11/12 rounded overflow-hidden shadow-lg ml-6 mt-6 p-3;
 }
 .card-border{
-  @apply w-11/12 rounded border overflow-hidden shadow-md ml-6 mt-6 p-3 md:bg-blue-100 lg:bg-red-300;
+  @apply w-11/12 rounded border overflow-hidden shadow-md ml-6 mt-6 p-3;
 }
 .card-border-sm-shadow{
  @apply w-11/12 border-2 overflow-hidden shadow-sm ml-6 mt-6 p-3;
