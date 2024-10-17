@@ -14,6 +14,7 @@ export const routes: Routes = [
       { path: 'cards', component: CardComponent },
     ],
   },
+  { path: '', component: PortalComponent },
   { path: 'button', component: ButtonComponent },
   { path: 'inputs', component: InputsComponent },
   { path: 'cards', component: CardComponent },
