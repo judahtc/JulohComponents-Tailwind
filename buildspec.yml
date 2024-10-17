@@ -1,0 +1,29 @@
+version: 0.2
+env:
+  variables:
+    CACHE_CONTROL: "86400"
+    S3_BUCKET: $BUCKET_NAME
+    BUILD_FOLDER: "dist"
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing npm dependencies...
+      - npm install --force
+      - npm install -g @angular/cli
+
+  build:
+    commands:
+      - echo Building Angular project started...
+      - ng build
+
+  post_build:
+    commands:
+      - echo Build completed...
+      - aws s3 sync dist/juloh-components/browser/ s3://frontendcomponents/ --delete --cache-control $CACHE_CONTROL
+artifacts:
+  files:
+    - "**/*"
+  base-directory: "dist/"
+  discard-paths: no

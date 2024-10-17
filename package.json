@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "aws-deploy": "aws s3 sync dist/juloh-components/browser/ s3://frontendcomponents --region eu-north-1"
   },
   "private": true,
   "dependencies": {
