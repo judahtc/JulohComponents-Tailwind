@@ -9,9 +9,9 @@ export const routes: Routes = [
     path: 'portal',
     component: PortalComponent,
     children: [
+      { path: 'card', component: CardComponent },
       { path: 'button', component: ButtonComponent },
       { path: 'inputs', component: InputsComponent },
-      { path: 'cards', component: CardComponent },
     ],
   },
   { path: '', component: PortalComponent },
