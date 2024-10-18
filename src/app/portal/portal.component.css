@@ -1,0 +1,7 @@
+.sidebar-items {
+  @apply hover:bg-zinc-100 hover:px-3 hover:py-1 py-1 px-3 hover:rounded-[3px];
+}
+
+li.selected {
+  @apply bg-zinc-100  py-1 px-3 rounded-[3px];
+}

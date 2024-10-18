@@ -10,20 +10,20 @@
 </div>
 <div class="flex">
   <div class="sidebar p-2 border-x w-40 h-screen rounded-sm mt-2 shadow-lg ">
-    <ul class="space-y-4 mt-4 ml-2">
-      <li>
-        <a href="/portal/inputs">inputs</a>
+    <ul class="space-y-2 mt-4  text-md">
+      <li [class.selected]="inputs" class="sidebar-items">
+        <a href="/portal/inputs?comp=input">inputs</a>
       </li>
-      <li>
-        <a href="/portal/button"> buttons</a>
+      <li [class.selected]="button" class="sidebar-items">
+        <a href="/portal/button?comp=button"> buttons</a>
       </li>
-      <li>
-        <a href="/portal/card">cards</a>
+      <li [class.selected]="card" class="sidebar-items">
+        <a href="/portal/card?comp=card">cards</a>
       </li>
-      <li>
-        <a href=""> inputs</a>
+      <li [class.selected]="regform" class="sidebar-items">
+        <a href="/portal/reg?comp=regforms"> reg forms</a>
       </li>
-      <li>
+      <li class="sidebar-items">
         <a href=""> inputs</a>
       </li>
     </ul>
