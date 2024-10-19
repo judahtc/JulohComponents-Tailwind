@@ -4,6 +4,7 @@ import { InputsComponent } from './inputs/inputs.component';
 import { CardComponent } from './card/card.component';
 import { PortalComponent } from './portal/portal.component';
 import { RegistrationFormsComponent } from './registration-forms/registration-forms.component';
+import { YoutubeDownloaderComponent } from './youtube-downloader/youtube-downloader.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
     ],
   },
   { path: '', component: PortalComponent },
+  { path: 'yd', component: YoutubeDownloaderComponent },
   { path: 'button', component: ButtonComponent },
   { path: 'inputs', component: InputsComponent },
   { path: 'cards', component: CardComponent },
