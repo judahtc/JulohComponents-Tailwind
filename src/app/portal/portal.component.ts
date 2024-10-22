@@ -15,7 +15,7 @@ export class PortalComponent implements OnInit {
   inputs = false;
   card = false;
   button = false;
-  regform = true;
+  regform = false;
   table = true;
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
@@ -27,8 +27,9 @@ export class PortalComponent implements OnInit {
         this.cardFunc();
       } else if (parameter == 'button') {
         this.buttonFunc();
-      } else if (parameter == 'regform') {
+      } else if (parameter == 'regforms') {
         this.regformFunc();
+        this.table = false;
       } else if (parameter == 'table') {
         this.TableFunc();
       }

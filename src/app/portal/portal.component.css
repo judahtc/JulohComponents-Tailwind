@@ -5,3 +5,32 @@
 li.selected {
   @apply bg-zinc-100  py-[2.7px] px-3 rounded-[3px];
 }
+
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.content {
+
+/* Added height for scroll example */
+min-height: calc(100vh - 40px);
+position: sticky;
+  overflow-y: auto;
+  top:40px;
+
+}
+.sidebar {
+
+/* Added height for scroll example */
+height: calc(100vh - 40px);
+position: sticky;
+  overflow-y: auto;
+  top:40px;
+
+}
+
+
+
