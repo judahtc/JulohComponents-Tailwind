@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './table.component.css',
 })
 export class TableComponent implements OnInit {
-  data: any;
+  data: any[] = [];
+  columns: any;
   ngOnInit(): void {
+    this.columns = {
+      id: 'id',
+      component: 'component',
+      description: 'description',
+      items: 'items',
+    };
     this.data = [
       {
         id: 1,
@@ -29,28 +36,28 @@ export class TableComponent implements OnInit {
         items: 6,
         description: 'various input types with various classes',
       },
-      ,
+
       {
         id: 4,
         component: 'reg forms',
         items: 9,
         description: 'various reg forms types with various classes',
       },
-      ,
+
       {
         id: 5,
         component: 'login',
         items: 6,
         description: 'various login form types with various classes',
       },
-      ,
+
       {
         id: 6,
         component: 'links',
         items: 6,
         description: 'various link types with various classes',
       },
-      ,
+
       {
         id: 7,
         component: 'top navs',
