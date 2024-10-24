@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [],
+  imports: [NgxPaginationModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css',
 })
 export class TableComponent implements OnInit {
   data: any[] = [];
   columns: any;
+  mylength: any = 4;
+  pageSize: any = 16;
+
+  p: number = 1;
+  collection: any[] = this.data;
   ngOnInit(): void {
     this.columns = {
       id: 'id',
@@ -66,4 +71,8 @@ export class TableComponent implements OnInit {
       },
     ];
   }
+
+  pagesArray = Array(Math.ceil(this.mylength / this.pageSize))
+    .fill(0)
+    .map((x, i) => i + 1);
 }
