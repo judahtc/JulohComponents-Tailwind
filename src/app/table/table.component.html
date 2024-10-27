@@ -49,8 +49,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b text-sm bg-white"
-          *ngFor="let item of data| paginate: { itemsPerPage: 10, currentPage: page }">
+        <tr class="border-b text-sm bg-white" *ngFor="let item of data| paginate: { itemsPerPage: 10, currentPage: p }">
           <td class="px-3 py-2">{{item.id}}</td>
           <td class="px-3 py-2">{{item.component}}</td>
 
@@ -105,3 +104,5 @@
     <li class="border px-2 py-1 rounded-r-md">next</li>
   </ul>
 </div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
