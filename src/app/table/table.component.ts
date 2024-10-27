@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 export class TableComponent implements OnInit {
   data: any[] = [];
   columns: any;
-  mylength: any = 4;
-  pageSize: any = 16;
+
+  pageSize: any = 1;
 
   p: number = 1;
   collection: any[] = this.data;
@@ -71,9 +71,7 @@ export class TableComponent implements OnInit {
         description: 'various nav types with various classes',
       },
     ];
-  }
 
-  pagesArray = Array(Math.ceil(this.mylength / this.pageSize))
-    .fill(0)
-    .map((x, i) => i + 1);
+    this.collection = this.data;
+  }
 }
