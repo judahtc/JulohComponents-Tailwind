@@ -11,8 +11,9 @@ import { PaginationService } from 'ngx-pagination';
 })
 export class TableComponent implements OnInit {
   data_list: any[] = [];
+  len: number = 0;
   constructor(public paginationService: PaginationService) {}
-
+  itemsPerPage: number = 6;
   changePage(page: number) {
     this.p = page;
   }
@@ -82,7 +83,10 @@ export class TableComponent implements OnInit {
 
     this.collection = this.data;
     this.data_list = [];
-    for (let i = 1; i <= this.collection.length; i++) {
+    this.len = this.collection.length;
+    this.len = this.len / this.itemsPerPage;
+    this.len = Math.ceil(this.len);
+    for (let i = 1; i <= this.len; i++) {
       this.data_list.push(i);
     }
   }
