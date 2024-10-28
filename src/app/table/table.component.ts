@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule } from '@angular/common';
+import { PaginationService } from 'ngx-pagination';
 @Component({
   selector: 'app-table',
   standalone: true,
@@ -9,8 +10,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './table.component.css',
 })
 export class TableComponent implements OnInit {
+  data_list: any[] = [];
+  constructor(public paginationService: PaginationService) {}
+
+  changePage(page: number) {
+    this.p = page;
+  }
   data: any[] = [];
   columns: any;
+  directionlink = true;
 
   pageSize: any = 1;
 
@@ -73,5 +81,9 @@ export class TableComponent implements OnInit {
     ];
 
     this.collection = this.data;
+    this.data_list = [];
+    for (let i = 1; i <= this.collection.length; i++) {
+      this.data_list.push(i);
+    }
   }
 }
