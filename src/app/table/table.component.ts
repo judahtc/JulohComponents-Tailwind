@@ -90,4 +90,14 @@ export class TableComponent implements OnInit {
       this.data_list.push(i);
     }
   }
+
+  showModal = false; // Controls modal visibility
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
 }
