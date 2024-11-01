@@ -6,6 +6,7 @@ import { PortalComponent } from './portal/portal.component';
 import { RegistrationFormsComponent } from './registration-forms/registration-forms.component';
 import { YoutubeDownloaderComponent } from './youtube-downloader/youtube-downloader.component';
 import { TableComponent } from './table/table.component';
+import { ModalComponent } from './modal/modal.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,7 @@ export const routes: Routes = [
       { path: 'inputs', component: InputsComponent },
       { path: 'reg', component: RegistrationFormsComponent },
       { path: 'table', component: TableComponent },
+      { path: 'modal', component: ModalComponent },
     ],
   },
   { path: '', component: PortalComponent },
