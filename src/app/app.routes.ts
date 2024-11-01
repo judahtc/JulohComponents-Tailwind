@@ -7,6 +7,8 @@ import { RegistrationFormsComponent } from './registration-forms/registration-fo
 import { YoutubeDownloaderComponent } from './youtube-downloader/youtube-downloader.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
+import { PositionsComponent } from './positions/positions.component';
+import { ScrollComponent } from './scroll/scroll.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +21,7 @@ export const routes: Routes = [
       { path: 'reg', component: RegistrationFormsComponent },
       { path: 'table', component: TableComponent },
       { path: 'modal', component: ModalComponent },
+      { path: 'positions', component: PositionsComponent },
     ],
   },
   { path: '', component: PortalComponent },
@@ -26,4 +29,5 @@ export const routes: Routes = [
   { path: 'button', component: ButtonComponent },
   { path: 'inputs', component: InputsComponent },
   { path: 'cards', component: CardComponent },
+  { path: 'scroll', component: ScrollComponent },
 ];
