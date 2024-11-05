@@ -10,6 +10,7 @@ import { Route, ActivatedRoute } from '@angular/router';
   styleUrl: './portal.component.css',
 })
 export class PortalComponent implements OnInit {
+  positions = false;
   constructor(private route: ActivatedRoute) {}
   clicked = true;
   inputs = false;
@@ -17,6 +18,7 @@ export class PortalComponent implements OnInit {
   button = false;
   regform = false;
   table = true;
+  modal = false;
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       let parameter = params['comp'];
@@ -32,6 +34,10 @@ export class PortalComponent implements OnInit {
         this.table = false;
       } else if (parameter == 'table') {
         this.TableFunc();
+      } else if (parameter == 'positions') {
+        this.PositionsFunc();
+      } else if (parameter == 'modal') {
+        this.ModalFunc();
       }
     });
   }
@@ -41,6 +47,7 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = false;
     this.table = false;
+    this.positions = false;
   }
   cardFunc() {
     this.inputs = false;
@@ -48,6 +55,7 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = false;
     this.table = false;
+    this.positions = false;
   }
   buttonFunc() {
     this.inputs = false;
@@ -55,6 +63,7 @@ export class PortalComponent implements OnInit {
     this.button = true;
     this.regform = false;
     this.table = false;
+    this.positions = false;
   }
   regformFunc() {
     this.inputs = false;
@@ -62,6 +71,7 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = true;
     this.table = false;
+    this.positions = false;
   }
   TableFunc() {
     this.inputs = false;
@@ -69,5 +79,23 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = false;
     this.table = true;
+    this.positions = false;
+  }
+  PositionsFunc() {
+    this.inputs = false;
+    this.card = false;
+    this.button = false;
+    this.regform = false;
+    this.table = false;
+    this.positions = true;
+  }
+  ModalFunc() {
+    this.inputs = false;
+    this.card = false;
+    this.button = false;
+    this.regform = false;
+    this.table = false;
+    this.positions = false;
+    this.modal = true;
   }
 }
