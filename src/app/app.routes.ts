@@ -9,6 +9,7 @@ import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
 import { PositionsComponent } from './positions/positions.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +23,7 @@ export const routes: Routes = [
       { path: 'table', component: TableComponent },
       { path: 'modal', component: ModalComponent },
       { path: 'positions', component: PositionsComponent },
+      { path: 'settings', component: SettingsComponent },
     ],
   },
   { path: '', component: PortalComponent },
