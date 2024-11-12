@@ -25,10 +25,10 @@ position: sticky;
 .sidebar {
 
 /* Added height for scroll example */
-height: calc(100vh - 40px);
+height: calc(100vh - 47px);
 position: sticky;
   overflow-y: auto;
-  top:40px;
+  top:47px;
 
 }
 
