@@ -22,42 +22,60 @@
         <!-- ######## -->
 
       </div>
-      <ul class="space-y-2 mt-4  text-md">
-        <li [class.selected]="inputs" class="sidebar-items">
-          <a href="/portal/inputs?comp=input">inputs</a>
-        </li>
+      <ul class="space-y-[1px] mt-4  text-md">
+        <a href="/portal/inputs?comp=input">
+          <li [class.selected]="inputs" class="sidebar-items">
+            inputs
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="button" class="sidebar-items">
-          <a href="/portal/button?comp=button"> buttons</a>
-        </li>
+        <a href="/portal/button?comp=button">
+          <li [class.selected]="button" class="sidebar-items">
+            buttons
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="card" class="sidebar-items">
-          <a href="/portal/card?comp=card">cards</a>
-        </li>
+        <a href="/portal/card?comp=card">
+          <li [class.selected]="card" class="sidebar-items">
+            cards
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="regform" class="sidebar-items">
-          <a href="/portal/reg?comp=regforms"> reg forms</a>
-        </li>
+        <a href="/portal/reg?comp=regforms">
+          <li [class.selected]="regform" class="sidebar-items">
+            reg forms
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="table" class="sidebar-items">
-          <a href="/portal/table?comp=table"> table</a>
-        </li>
+        <a href="/portal/table?comp=table">
+          <li [class.selected]="table" class="sidebar-items">
+            table
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="positions" class="sidebar-items">
-          <a href="/portal/positions?comp=positions"> positions</a>
-        </li>
+        <a href="/portal/positions?comp=positions">
+          <li [class.selected]="positions" class="sidebar-items">
+            positions
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="modal" class="sidebar-items">
-          <a href="/portal/modal?comp=modal"> modal</a>
-        </li>
+        <a href="/portal/modal?comp=modal">
+          <li [class.selected]="modal" class="sidebar-items">
+            modal
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="" class="sidebar-items">
-          <a href="/scroll"> scroll</a>
-        </li>
+        <a href="/scroll">
+          <li [class.selected]="" class="sidebar-items">
+            scroll
+          </li>
+        </a>
         <hr class="border-slate-100">
-        <li [class.selected]="" class="sidebar-items">
-          <a href="/portal/settings"> settings</a>
-        </li>
+        <a href="/portal/settings?comp=settings">
+          <li [class.selected]="settings" class="sidebar-items">
+            settings
+          </li>
+        </a>
         <hr class="border-slate-100">
       </ul>
     </div>

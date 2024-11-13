@@ -19,6 +19,7 @@ export class PortalComponent implements OnInit {
   regform = false;
   table = true;
   modal = false;
+  settings = false;
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       let parameter = params['comp'];
@@ -38,15 +39,20 @@ export class PortalComponent implements OnInit {
         this.PositionsFunc();
       } else if (parameter == 'modal') {
         this.ModalFunc();
+      } else if (parameter == 'settings') {
+        this.SettingsFunc();
       }
     });
   }
+
   inputsFunc() {
     this.inputs = true;
     this.card = false;
     this.button = false;
     this.regform = false;
     this.table = false;
+    this.settings = false;
+    this.modal = false;
     this.positions = false;
   }
   cardFunc() {
@@ -56,6 +62,8 @@ export class PortalComponent implements OnInit {
     this.regform = false;
     this.table = false;
     this.positions = false;
+    this.settings = false;
+    this.modal = false;
   }
   buttonFunc() {
     this.inputs = false;
@@ -63,6 +71,8 @@ export class PortalComponent implements OnInit {
     this.button = true;
     this.regform = false;
     this.table = false;
+    this.settings = false;
+    this.modal = false;
     this.positions = false;
   }
   regformFunc() {
@@ -71,6 +81,8 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = true;
     this.table = false;
+    this.settings = false;
+    this.modal = false;
     this.positions = false;
   }
   TableFunc() {
@@ -79,6 +91,8 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = false;
     this.table = true;
+    this.settings = false;
+    this.modal = false;
     this.positions = false;
   }
   PositionsFunc() {
@@ -87,6 +101,8 @@ export class PortalComponent implements OnInit {
     this.button = false;
     this.regform = false;
     this.table = false;
+    this.settings = false;
+    this.modal = false;
     this.positions = true;
   }
   ModalFunc() {
@@ -96,6 +112,18 @@ export class PortalComponent implements OnInit {
     this.regform = false;
     this.table = false;
     this.positions = false;
+    this.settings = false;
     this.modal = true;
+  }
+
+  SettingsFunc() {
+    this.inputs = false;
+    this.card = false;
+    this.button = false;
+    this.regform = false;
+    this.table = false;
+    this.positions = false;
+    this.modal = false;
+    this.settings = true;
   }
 }
